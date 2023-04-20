@@ -3,6 +3,22 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
+class StringCheck implements StringChecker {
+  String str;
+  
+  StringCheck(String str) {
+    this.str = str;
+  }
+
+  public boolean checkString(String s) {
+    if (s.contains(str)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
 class ListExamples {
 
   // Returns a new list that has all the elements of the input list for which
@@ -12,7 +28,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(s);
       }
     }
     return result;
