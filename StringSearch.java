@@ -15,7 +15,7 @@ class Handler implements URLHandler {
                 concatStr = concatStr + parameters[1] + "\n";
                 return concatStr;
             } else {
-                return "Invalid path!";
+                return "Invalid query!";
             }
         } 
         return "404 Not Found!";
