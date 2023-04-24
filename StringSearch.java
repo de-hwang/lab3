@@ -9,7 +9,7 @@ class Handler implements URLHandler {
             return """
                 Type \"/add-message?s=<string>\" to add messages
                 """;
-        } else if (url.getPath().contains("/add")) {
+        } else if (url.getPath().contains("/add-message")) {
             String[] parameters = url.getQuery().split("=");
             if (parameters[0].equals("s")) {
                 concatStr = concatStr + parameters[1] + "\n";
